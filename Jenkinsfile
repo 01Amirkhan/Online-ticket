@@ -6,6 +6,7 @@ pipeline {
 
         stage('Clone') {
             steps {
+                git branch: 'main',
                 git 'https://github.com/01Amirkhan/Online-ticket.git'
             }
         }
