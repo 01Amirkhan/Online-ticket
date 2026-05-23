@@ -1,19 +1,17 @@
 pipeline {
-
     agent any
 
     stages {
 
         stage('Clone') {
             steps {
-                git branch: 'main',
-                git 'https://github.com/01Amirkhan/Online-ticket.git'
+                git branch: 'main', url: 'https://github.com/01Amirkhan/Online-ticket.git'
             }
         }
 
         stage('Install') {
             steps {
-                sh 'npm install'
+                sh 'echo Installing Dependencies'
             }
         }
 
